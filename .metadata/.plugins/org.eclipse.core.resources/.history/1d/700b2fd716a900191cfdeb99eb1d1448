@@ -1,0 +1,29 @@
+package training.day4;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class ReadWriteData {
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		System.out.println("enter Employee ID");
+		int empId = Integer.parseInt(br.readLine());
+		
+		System.out.println("enter name");
+		String empName = br.readLine();
+		
+		System.out.println("enter salary:");
+		double salary = Double.parseDouble(br.readLine());
+		display(empId,empName,salary);
+		
+	}
+
+	private static void display(int empId, String empName, double salary) {
+		// TODO Auto-generated method stub
+		System.out.println("empID:"+ empId);
+		System.out.println("empName"+ empName);
+		System.out.println("Salary:"+ salary);
+	}
+
+}

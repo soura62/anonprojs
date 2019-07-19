@@ -1,0 +1,12 @@
+package training.day3;
+
+public class ExceptionEx1 {
+	public static void main(String [] args) {
+		int n1 = 100;
+		int n2 = 0;
+		System.out.println("Result of division is"+(n1/n2));
+		
+		
+	}
+
+}

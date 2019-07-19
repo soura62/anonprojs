@@ -1,0 +1,15 @@
+package training.day2;
+
+public class SortingTemplate {
+
+		public Student[] sortByNameAsc(Student[] students) {
+			Comparator<Student> comapartorSortBynameAsc = new Comparator<Student>() {
+				
+				@Override
+				public int compare(Student o1, Student o2) {
+					return o1.getsName().compareTo((o2.getsName));
+				}
+				
+			
+		};
+}

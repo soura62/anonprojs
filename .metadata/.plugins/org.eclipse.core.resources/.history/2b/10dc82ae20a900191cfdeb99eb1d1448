@@ -1,0 +1,32 @@
+package training.day2;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+
+public class ReadWriteObject {
+	
+	public static void storeAccount(Account account) 
+		throws FileNotFoundException, IOException {
+		File file = new File("account.sar");
+		ObjectOutputStream oos = new ObjectOutputStream( new FileOutputStream(file));
+		
+		oos.writeObject(account);
+		oos.close();
+		System.out.println("Data written succesfully");
+	}
+	 public static void main(String[] args) {
+		Account account = new Account("Udit",2233);
+		try {
+		storeAccount(account);
+		}catch(FileNotFoundException e) {
+			e.printStackTrace();
+		
+		}catch(IOException ioe) {
+			ioe.printStackTrace();
+		 
+	}
+	 }
+}

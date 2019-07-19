@@ -1,0 +1,11 @@
+package training.basics;
+
+public class Name {
+public static void main(String[] args) {
+	
+	String empName = "Sourajit";
+	if(empName.length <3)
+		System.out.println("Name is too small");
+}
+	}
+

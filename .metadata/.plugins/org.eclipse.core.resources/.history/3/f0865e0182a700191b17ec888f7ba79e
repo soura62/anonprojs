@@ -1,0 +1,8 @@
+package training.day2;
+
+public class BMW extends FourWheeler{
+	public void musicPlayer() {
+		System.out.println("BMW comes witha Sony music system");
+	}
+
+}

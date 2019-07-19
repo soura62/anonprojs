@@ -1,0 +1,21 @@
+package training.day4;
+
+import java.io.File;
+import java.io.IOException;
+
+public class FileOperation {
+	public static void main(String[] args) throws IOException {
+		File f = new File("HelloWorld.txt");
+		if(f.exists()) {
+			System.out.println("Hey File exists");
+			
+		}else {
+			f.createNewFile();
+			System.out.println("file Created");
+		}
+		System.out.println("last Modified"+ new Date(f.lastModified()));
+		System.out.println("Can Read"+ f.canRead());
+		System.out.println("Absolute path"+ f.getAbsolutePath());
+		System.out.println("File Name"+f.getName());
+	}
+}
