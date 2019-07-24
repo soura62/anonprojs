@@ -9,5 +9,7 @@ public class App {
 		Employee employee = new Employee(1000, "raj","raj@ps.com","1980-01-05",20,40000);
 		IEmployeeDAO dao = new EmployeeDAO();
 		System.out.println(dao.insertEmployee(employee)?"inserted":"not inserted");
+		System.out.println(dao.updateEmployee(1000,9999)?"updated":"not updated");
+		
 	}
 }

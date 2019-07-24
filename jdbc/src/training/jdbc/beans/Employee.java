@@ -7,6 +7,10 @@ public class Employee {
 	private String empDob;
 	private int  departmentId;
 	private double empSalary;
+	
+	public Employee() {
+		// TODO Auto-generated constructor stub
+	}
 	public Employee(int empId, String empName, String empEmail, String empDob, int departmentId, double empSalary) {
 		super();
 		this.empId = empId;
@@ -16,6 +20,8 @@ public class Employee {
 		this.departmentId = departmentId;
 		this.empSalary = empSalary;
 	}
+	
+
 	public int getEmpId() {
 		return empId;
 	}

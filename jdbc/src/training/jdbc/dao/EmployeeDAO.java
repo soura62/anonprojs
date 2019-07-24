@@ -22,7 +22,9 @@ public class EmployeeDAO implements IEmployeeDAO{
 		return gc.ps.executeUpdate()>0;
 		}catch(SQLException e) {
 			e.printStackTrace();
-		}
+		};
+		return false;
+	}
 
 	public boolean deleteEmployee(int empId) {
 		// TODO Auto-generated method stub
@@ -40,5 +42,35 @@ public class EmployeeDAO implements IEmployeeDAO{
 		// TODO Auto-generated method stub
 		return null;
 	}
+	
+	public Employee getEmployee(int empId) {
+		String sql = "Select emp_id,emp_name,emp_email, emp_dob,"+"department_id,salary from where emp_id";
+		
+		GetConnection gc = new GetConnection();
+		
+		try {
+			gc.ps = GetConnection.getMysqlConnection().prepareStatement(sql);
+		
 
+		gc.ps.setInt(1, empId);
+		gc.rs = gc.ps.executeQuery();
+		if(gc.rs.next()) {
+			Employee employee = new Employee();
+			
+			employee.setEmpId(gc.rs.getInt("emp_ID"));
+			employee.setEmpName(gc.rs.getString("emp_name"));
+			employee.setEmpEmail(gc.rs.getString("emp_email"));
+			employee.setEmpDob(gc.rs.getString("emp_dob"));
+			employee.setDepartmentId(gc.rs.getInt("department_id"));
+			employee.setEmpSalary(gc.rs.getDouble("salary"));
+			
+			return employee;
+		}
+	} catch (SQLException e) {
+		
+		e.printStackTrace();
+	};
+	return null;
+
+}
 }

@@ -1,8 +1,0 @@
-package training.basics;
-
-public class DateDiff {
-public static void main(String[] args) {
-	
-}
-	}
-}

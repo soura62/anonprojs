@@ -1,0 +1,24 @@
+create table Product(
+
+pid int(4) NOT NULL PRIMARY KEY,
+
+Category varchar(20)
+);
+create table Clothing(
+cid int(4),
+ 
+typOfClothing varchar(20)
+);
+create table Shirt(
+shirt_id int(4),
+
+shirt_name varchar(20),
+
+shirt_quantity int(4),
+
+shirt_size char(1),
+
+shirt_price double(5),
+
+shirt_gender varchar(1)
+);

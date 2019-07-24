@@ -1,8 +1,0 @@
-package training.day2;
-
-public class maruti extends FourWheeler{
-	public void engineStandard( String engineStd) {
-		System.out.println("The Maruti is "+ engineStd);
-	}
-
-}

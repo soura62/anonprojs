@@ -1,7 +1,0 @@
-package training.day3;
-public class ThreadEx02{
-	/*public static void main(String[] args) {
-		MyBusinessLogic mb1 = new MyBusinessLogic("laptop",1);
-		MyBusinessLogic mb2 = new MyBusinessLogic("game",2);
-	}*/
-}
